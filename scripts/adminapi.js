@@ -38,6 +38,6 @@ var LogOut_Btn = document.getElementById('LogOut_Btn');
 LogOut_Btn.onclick = function() {
   firebase.auth().signOut().then(function() {
     alert("成功登出");
-    window.location.href="login.html";
+    window.location.href="index.html";
   })
 }

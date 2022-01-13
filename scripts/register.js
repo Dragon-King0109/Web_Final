@@ -18,7 +18,7 @@ submitBtn.addEventListener("click", function (e) {
     firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
     .then(() => {
       alert("註冊成功 現在為您跳轉到登入頁面");
-      window.location.href="login.html";
+      window.location.href="index.html";
     })
     .catch((error) => {
       alert(error.message);
