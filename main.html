@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Chunyin的留言板</title>
+    <link rel="stylesheet" type="text/css" href="./css/main.css"/>
+  </head>
+  <body>
+    <div id="Title_frame">
+      Chunyin'Liu 的留言板<button type="button" id="LogOut_Btn" style="position:absolute;top:3px;left:95%;">登出</button>
+    </div>
+    <br><br><br>
+    <section>
+      <table id='comments'></table>
+    </section>
+    <div id="comment_frame">
+    <p>暱稱：<input type="text" id="userid" class="userid_field"/> 留言：<input type="text" id="comment" class="text_field"/><button type="button" id="comment_submit_Btn">提交留言</button></p>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="./scripts/api.js"></script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>註冊頁面</title>
+    <link rel="stylesheet" type="text/css" href="./css/login.css"/>
+  </head>
+  <body>
+    <div id="login_frame">
+    <p style="font-size:20px">Register</p>
+    <form method="post" action="./scripts/register.js">
+    <p><label class="label_input">帳戶信箱</label><input type="text" id="email" class="text_field"/></p>
+    <p><label class="label_input">密碼</label><input type="password" id="password" class="text_field"/></p>
+    <p><label class="label_input">確認密碼</label><input type="password" id="checkpassword" class="text_field"/></p>
+    <div id="login_control">
+      <button type="button" id="submitBtn">註冊</button>
+      <a id="back" href="login.html">回到登入頁面</a>
+    </div>
+    </form>
+    </div>
+    <!--  Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+    <script src="./scripts/register.js"></script>
+  </body>
+</html>

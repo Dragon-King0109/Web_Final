@@ -1,0 +1,135 @@
+body {
+  background-color: rgba(0, 0, 0, 0.8);
+  background-blend-mode: multiply;
+  background-image: url("../img/mainbg.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.text_field {
+  width: 500px;
+  height: 40px;
+  font-size: 24px;
+  border-radius: 6px;
+  border: 0;
+}
+
+.userid_field {
+  width: 130px;
+  height: 40px;
+  font-size: 24px;
+  border-radius: 6px;
+  border: 0;
+}
+
+#Title_frame {
+  width: 100%;
+  height: 35px;
+  position: absolute;
+  background-color: rgba(240, 255, 255, 0.6);
+  border-radius: 8px;
+  text-align: center;
+  font-size: 30px;
+  font-family: 宋體;
+  color: #ff0;
+}
+
+#LogOut_Btn {
+  top: -5%;
+  font-size: 14px;
+  font-family: 宋體;
+  width: 80px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  color: black;
+  border-radius: 6px;
+  border: 0;
+  left: 40%;
+}
+
+#comment_frame {
+  width: 1000px;
+  height: 80px;
+  padding: 13px;
+  position: absolute;
+  left: 33%;
+  top: 100%;
+  margin-left: -200px;
+  margin-top: -200px;
+  background-color: rgba(240, 255, 255, 0.6);
+  border-radius: 10px;
+  text-align: center;
+}
+
+th {
+    background-color: #009FCC;
+    padding: 10px;
+    border: 1px solid #000;
+    color: #fff;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #000;
+}
+
+.user {
+  font-size: 14px;
+  font-family: 宋體;
+  width: 200px;
+  height: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: black;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.comment {
+  font-size: 14px;
+  font-family: 宋體;
+  width: 800px;
+  height: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: black;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.time {
+  font-size: 14px;
+  font-family: 宋體;
+  width: 400px;
+  height: 20px;
+  line-height: 28px;
+  text-align: center;
+  color: black;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+tr:nth-child(odd) {
+    background-color: whitesmoke;
+    padding: 5px;
+}
+
+tr:nth-child(even) {
+    background-color: khaki;
+    padding: 5px;
+}
+
+#comment_submit_Btn {
+  margin-left: 10px;
+  font-size: 14px;
+  font-family: 宋體;
+  width: 80px;
+  height: 28px;
+  line-height: 28px;
+  text-align: center;
+  color: black;
+  background-color: #3BD9FF;
+  border-radius: 6px;
+  border: 0;
+}
