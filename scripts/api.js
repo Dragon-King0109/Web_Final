@@ -22,17 +22,22 @@ firebase.database().ref(path).on(type, snapshot => {
     document.getElementById(tableID).innerHTML = tableInfo
 })
 
-
 var comment_submit = document.getElementById("comment_submit_Btn");
 var user_id = document.getElementById("userid");
 var comment_content = document.getElementById("comment");
 const database = firebase.database();
 
 comment_submit.addEventListener("click", function (e) {
-  var temp = new Date();
-  var time = temp.getFullYear() + '/' + (temp.getMonth()+1) + '/' + temp.getDate() + ' ' + temp.getHours() + ':' + temp.getMinutes() + ':' + temp.getSeconds();
-  var id = temp.getTime();
-  database.ref('/comments/' + id).set({Name:user_id.value,Time:time,content:comment_content.value});
+  if (user_id.value == "管理員") {
+    alert("您不是管理員，請勿使用管理員的名義發表留言")
+  }
+  else {
+    var temp = new Date();
+    var time = temp.getFullYear() + '/' + (temp.getMonth()+1) + '/' + temp.getDate() + ' ' + temp.getHours() + ':' + temp.getMinutes() + ':' + temp.getSeconds();
+    var id = temp.getTime();
+    database.ref('/comments/' + id).set({Name:user_id.value,Time:time,content:comment_content.value});
+    comment_content.value = "";
+  }
 })
 
 var LogOut_Btn = document.getElementById('LogOut_Btn');

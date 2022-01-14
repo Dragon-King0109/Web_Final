@@ -32,12 +32,23 @@ comment_submit.addEventListener("click", function (e) {
   var time = temp.getFullYear() + '/' + (temp.getMonth()+1) + '/' + temp.getDate() + ' ' + temp.getHours() + ':' + temp.getMinutes() + ':' + temp.getSeconds();
   var id = temp.getTime();
   database.ref('/comments/' + id).set({Name:"管理員",Time:time,content:comment_content.value});
+  comment_content.value = "";
 })
 
-var LogOut_Btn = document.getElementById('LogOut_Btn');
-LogOut_Btn.onclick = function() {
+var clearComment_Btn = document.getElementById("ClearComment_Btn");
+clearComment_Btn.addEventListener("click", function (e) {
+  if(confirm("真的要清除留言嗎？\n此操作無法復原")) {
+    var temp = new Date();
+    var time = temp.getFullYear() + '/' + (temp.getMonth()+1) + '/' + temp.getDate() + ' ' + temp.getHours() + ':' + temp.getMinutes() + ':' + temp.getSeconds();
+    var id = temp.getTime();
+    database.ref('/comments').set('');
+  }
+})
+
+var logOut_Btn = document.getElementById("LogOut_Btn");
+logOut_Btn.addEventListener("click", function (e) {
   firebase.auth().signOut().then(function() {
     alert("成功登出");
     window.location.href="index.html";
   })
-}
+})
